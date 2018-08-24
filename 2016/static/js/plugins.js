@@ -1,0 +1,1 @@
+(function($) {	$.fn.plugin1 = function(options) {		var defaults = {'foreground' : '960px' , 'background' : '300px'};		var args = $.extend(defaults , options);		alert(defaults.foreground);		alert(options.foreground);	}})(jQuery);

@@ -1,0 +1,235 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+	<title>VisioTech 2016 | MGMs College of Engineering Nanded.</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="text/javascript" src="/static/js/jquery-1.11.1.min.js"></script>
+	<script src="/static/js/bootstrap.min.js"></script>
+	<link href="/static/css/bootstrap.min.css" rel="stylesheet">
+	<!--[if lt IE 9]>
+	<script src="static/js/html5shiv.js"></script>
+	<script src="static/js/respond.min.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" href="/style2.min.css">
+	<script src="/script.min.js"></script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-74220237-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+    </head>
+
+    <body>
+	<div class="container-fluid content-pane">
+	    <div class="row">
+		<div class="col-xs-12">
+		    <div style="min-height: 50px"></div>
+		    <img class="img-responsive center-block" src="/images/mgm.png">
+		    <p style="text-align: center;color:white;font-size: 18px; ">presents</p>
+		    <img id="visiotech-logo-back-img" src="images/visiotech.png" class="img-responsive center-block" alt="MGM College of Engineering">
+		    <div class="description-vt">
+			<p>M.G.M's College of Engineering organizes a national technical event VISIOTECH 'Today's Vision, Tomorrow's Technology'. It is a national level program for the aspirants to exhibit their talent and skills through fierce competitions. It intends to provide host of opportunities to different branches’ would be technocrafts with the help of various technical and non technical events. The VISIOTECH will be packed with multiple competitions at different levels enhancing the knowledge and testing capabilities of would be engineers.</p>
+			<p style="text-align: center;"><br/><span style="font-size:1.5em;"> 25<sup>th</sup>, 26<sup>th</sup> & 27<sup>th</sup></span> Feb 2016<span style="font-size:1.5em;"></span></p>
+		
+		    </div>
+		</div>
+	    </div>
+	    
+        <?php
+	    if(time() < 1456371000) {
+	?>
+        <div class="row">
+		<div id="countdown" class="countdown container" align="center">
+		    <div class="col-sm-3 col-xs-6">
+			<div class="clock-item clock-days countdown-time-value">
+			    <div class="inner">
+				<div id="canvas-days" class="clock-canvas"></div>
+				<div class="text">
+				    <p class="val">0</p>
+				    <p class="type-days type-time">DAYS</p>
+				</div><!-- /.text -->
+			    </div><!-- /.inner -->
+			</div><!-- /.clock-item -->
+		    </div>
+		    <div class="col-sm-3 col-xs-6">
+			<div class="clock-item clock-hours countdown-time-value">
+			    <div class="inner">
+				<div id="canvas-hours" class="clock-canvas"></div>
+				<div class="text">
+				    <p class="val">0</p>
+				    <p class="type-hours type-time">HOURS</p>
+				</div><!-- /.text -->
+			    </div><!-- /.inner -->
+			</div><!-- /.clock-item -->
+		    </div>
+		    <div class="col-sm-3 col-xs-6">
+			<div class="clock-item clock-minutes countdown-time-value">
+			    <div class="inner">
+				<div id="canvas-minutes" class="clock-canvas"></div>
+				<div class="text">
+				    <p class="val">0</p>
+				    <p class="type-minutes type-time">MINUTES</p>
+				</div><!-- /.text -->
+			    </div><!-- /.inner -->
+			</div><!-- /.clock-item -->
+		    </div>
+		    <div class="col-sm-3 col-xs-6">
+			<div class="clock-item clock-seconds countdown-time-value">
+			    <div class="inner">
+				<div id="canvas-seconds" class="clock-canvas"></div>
+				<div class="text">
+				    <p class="val">0</p>
+				    <p class="type-seconds type-time">SECONDS</p>
+				</div><!-- /.text -->
+			    </div><!-- /.inner -->
+			</div><!-- /.clock-item -->
+		    </div>
+		</div><!-- /.countdown-wrapper -->
+	    </div>
+	    <?php
+	    } else {
+	    ?>
+	    <div class="row">
+		<div class="col-xs-12" style="text-align: center;padding: 2% 0;">
+		    <img style="" src="images/live.gif">
+		</div>
+	    </div>
+		
+	    
+	    <?php
+	    }
+	    ?>
+	    <script type="text/javascript" src="/static/js/kinetic.js"></script>          
+        <script type="text/javascript" src="/static/js/jquery.final-countdown.min.js"></script>
+	    <script type="text/javascript">
+		$(function() {
+		    $('.countdown').final_countdown({
+			'start': 1451014200,
+			'end': 1456371000,
+			'now': <?= time() ?>
+		    });
+		});
+	    </script>
+        <br>
+        <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-4">.</div>
+        
+        
+        <div class="col-lg-4 col-md-4 col-sm-4" align="center">
+        <marquee><a href="timetable.php" behavior="alternate" style="font-size:20px;color:white;">Click here to get Event Time Table.</a></marquee>
+        <marquee><a href="http://visiotech.in/events/special/youthparliament/#topics" behavior="alternate" style="font-size:20px;color:white;">Round 1 topics of Youth Parliment event are live</a></marquee>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-4">.</div>
+        </div>
+
+
+	    <div class="row row-custom">
+		<link rel="stylesheet" type="text/css" href="/css/default.css" />
+		<link rel="stylesheet" type="text/css" href="/css/component.css" />
+		<script src="/js/modernizr.custom.js"></script>
+		<div class="container-new">
+		    <nav id="menu" class="nav">					
+			<ul style="margin: 0 auto;color:white;">
+			    <li>
+				<a href="/">
+				    <span class="icon">
+					<i aria-hidden="true" class="glyphicon glyphicon-home"></i>
+				    </span>
+				    <span>Home</span>
+				</a>
+			    </li>
+			    <li>
+				<a href="/events">
+				    <span class="icon"> 
+					<i aria-hidden="true" class="glyphicon glyphicon-modal-window"></i>
+				    </span>
+				    <span>Events</span>
+				</a>
+			    </li>
+			    <li>
+				<a href="/venue">
+				    <span class="icon">
+					<i aria-hidden="true" class="glyphicon glyphicon-map-marker"></i>
+				    </span>
+				    <span>Venue</span>
+				</a>
+			    </li>
+			    <li>
+				<a href="/accommodation">
+				    <span class="icon">
+					<i aria-hidden="true" class="glyphicon glyphicon-cutlery"></i>
+				    </span>
+				    <span>Accommodation</span>
+				</a>
+			    </li>
+			    <li>
+				<a href="/aboutus">
+				    <span class="icon">
+					<i aria-hidden="true" class="glyphicon glyphicon-education"></i>
+				    </span>
+				    <span>About Us</span>
+				</a>
+			    </li>
+			    <li>
+				<a href="/contacts">
+				    <span class="icon">
+					<i aria-hidden="true" class="glyphicon glyphicon-phone"></i>
+				    </span>
+				    <span>Contacts</span>
+				</a>
+			    </li>
+			</ul>
+		    </nav>
+		</div>
+		<script>
+		//  The function to change the class
+		var changeClass = function(r, className1, className2) {
+		    var regex = new RegExp("(?:^|\\s+)" + className1 + "(?:\\s+|$)");
+		    if (regex.test(r.className)) {
+			r.className = r.className.replace(regex, ' ' + className2 + ' ');
+		    }
+		    else {
+			r.className = r.className.replace(new RegExp("(?:^|\\s+)" + className2 + "(?:\\s+|$)"), ' ' + className1 + ' ');
+		    }
+		    return r.className;
+		};
+
+		//  Creating our button in JS for smaller screens
+		var menuElements = document.getElementById('menu');
+		menuElements.insertAdjacentHTML('afterBegin', '<button type="button" id="menutoggle" class="navtoogle active" aria-hidden="true"><i aria-hidden="true" class="icon-menu"> </i> Menu</button>');
+
+		//  Toggle the class on click to show / hide the menu
+		document.getElementById('menutoggle').onclick = function() {
+		    changeClass(this, 'navtoogle active', 'navtoogle');
+		}
+
+		// http://tympanus.net/codrops/2013/05/08/responsive-retina-ready-menu/comment-page-2/#comment-438918
+		document.onclick = function(e) {
+		    var mobileButton = document.getElementById('menutoggle'),
+			    buttonStyle = mobileButton.currentStyle ? mobileButton.currentStyle.display : getComputedStyle(mobileButton, null).display;
+
+		    if (buttonStyle === 'block' && e.target !== mobileButton && new RegExp(' ' + 'active' + ' ').test(' ' + mobileButton.className + ' ')) {
+			changeClass(mobileButton, 'navtoogle active', 'navtoogle');
+		    }
+		}
+		</script>
+		<div class="footer">
+			<a href="https://www.facebook.com/visiotechmgmcoe/"><img src="images/facebook.png" alt="Facebook" width="35" height="35"></a>
+			<a href="https://twitter.com/VisioTech2k16"><img src="images/twitter.png" alt="Twitter" width="35" height="35"></a>
+			<a href="https://www.instagram.com/visiotech_16/"><img src="images/instagram.png" alt="Instagram" width="35" height="35"></a>
+			<a href="https://www.google.com/+VisiotechInMGM"><img src="images/Google_Plus.png" alt="Google Plus" width="35" height="35"></a>
+			<p class="copyright">© 2016 - MGM's College of Engineering, Nanded. | Designed and Developed By Web Committee VisioTech 2016</p>
+            <a href="sitemap.xml">Sitemap</a>
+		</div>
+	    </div>	    
+	</div>
+    </div> <!-- container -->
+</body>
+</html>

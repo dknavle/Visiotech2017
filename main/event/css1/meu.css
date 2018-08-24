@@ -1,0 +1,340 @@
+@import url(http://fonts.googleapis.com/css?family=Cambay:400,700&subset=latin,latin-ext);
+body {
+  font-family: 'Cambay', sans-serif;
+  background: #2d2d2d;
+}
+
+.container {
+  max-width: 690px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 690px) {
+  .container {
+    max-width: 460px;
+  }
+}
+@media screen and (max-width: 460px) {
+  .container {
+    max-width: 230px;
+  }
+}
+
+.flip-container, .front, .back {
+  margin: 5%;
+  position: relative;
+  width: 220px;
+  height: 220px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.flip-container {
+  float: left;
+  margin: 5px;
+  -moz-perspective: 1000;
+  -webkit-perspective: 1000;
+  perspective: 1000;
+  -moz-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.flip-container:hover, .flip-container.hover {
+  z-index: 2;
+}
+
+.up-bottom:hover .front, .up-bottom.hover .front {
+  -o-transform: rotateX(180deg);
+  -moz-transform: rotateX(180deg);
+  -ms-transform: rotateX(180deg);
+  -webkit-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+}
+.up-bottom:hover .back, .up-bottom.hover .back {
+  -o-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  -ms-transform: rotateX(0deg);
+  -webkit-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+}
+.up-bottom .back {
+  -o-transform: rotateX(-180deg);
+  -moz-transform: rotateX(-180deg);
+  -ms-transform: rotateX(-180deg);
+  -webkit-transform: rotateX(-180deg);
+  transform: rotateX(-180deg);
+}
+
+.left-right:hover .front, .left-right.hover .front {
+  -o-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+.left-right:hover .back, .left-right.hover .back {
+  -o-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  -webkit-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+}
+.left-right .back {
+  -o-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+  -webkit-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+}
+
+.front, .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  border: solid 2px #2DE0DD;/*#769d9c;*/
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-transition: ease-in-out 0.3s;
+  -o-transition: ease-in-out 0.3s;
+  -webkit-transition: ease-in-out 0.3s;
+  transition: ease-in-out 0.3s;
+}
+
+.front {
+  z-index: 2;
+}
+.front::after {
+  content: '';
+  position: absolute;
+  width: 220px;
+  height: 220px;
+}
+
+.back {
+  padding: 20px;
+  text-align: center;
+}
+.back::after {
+  width: 220px;
+  height: 220px;
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 9;
+  background-color: rgba(0, 0, 0, 0.66);
+  -moz-transition: ease 0.2s;
+  -o-transition: ease 0.2s;
+  -webkit-transition: ease 0.2s;
+  transition: ease 0.2s;
+}
+.back.still::after {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/*.description, .price {
+  z-index: 99;
+  color: #fff;
+  text-shadow: 1px 1px 3px #000;
+}*/
+
+.description {
+  position: relative;
+  font-size:28px;
+}
+.dp{
+
+  text-align: center;
+  position: absolute;
+ /*width: 100%;
+  */
+  left: 10%;
+  top:82%;
+  /*right:24%;
+*/
+  color:  #000;
+  font-size:170%;
+  text-shadow: 2px 2px 2px skyblue,3px 3px 3px black;
+
+
+}
+.price {
+  margin-top: 7%;
+  margin-left:0;
+  position: absolute;
+  color: #ffffff;
+  left:0; 
+  /*bottom: 0;
+  right: 0;
+  left: 0;
+ /* margin: 0 auto 98px;
+  */
+  font-size: 18px;
+ 
+}
+
+.actions {
+  position: relative;
+  left: 2%;
+  right: 0;
+  bottom: 0;
+  
+  margin: 16px auto;
+}
+
+.detail, .cart {
+  height: 50px;
+  line-height: 50px;
+  vertical-align: middle;
+  position: relative;
+  z-index: 999;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: 'Cambay', sans-serif;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: solid 2px #888;
+  border-radius: 10px;
+  -moz-transition: ease 0.2s;
+  -o-transition: ease 0.2s;
+  -webkit-transition: ease 0.2s;
+  transition: ease 0.2s;
+}
+.detail:hover, .cart:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #000;
+}
+
+.detail {
+ /* width: 30%;
+  font-size: 5vh;
+  font-weight: 700;*/
+}
+
+.cart {
+  width: 50px;
+}
+.cart svg {
+  margin: 5px 0 0 -2px;
+}
+.cart use {
+  fill: #fff;
+  -moz-transition: ease 0.2s;
+  -o-transition: ease 0.2s;
+  -webkit-transition: ease 0.2s;
+  transition: ease 0.2s;
+}
+.cart:hover use {
+  fill: #000;
+  -moz-transition: ease 0.2s;
+  -o-transition: ease 0.2s;
+  -webkit-transition: ease 0.2s;
+  transition: ease 0.2s;
+}
+
+.pin {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  z-index: 99;
+  cursor: pointer;
+}
+.pin use {
+  fill: #888;
+  -moz-transition: fill 0.2s;
+  -o-transition: fill 0.2s;
+  -webkit-transition: fill 0.2s;
+  transition: fill 0.2s;
+}
+.pin:hover use {
+  fill: #f2f2f2;
+  -moz-transition: fill 0.2s;
+  -o-transition: fill 0.2s;
+  -webkit-transition: fill 0.2s;
+  transition: fill 0.2s;
+}
+
+.product-1 .front {
+ 
+  opacity: 0.6;
+}
+
+/*.product-1 .back {
+  background: url("http://emper.cz/img/owl/01_2.jpg");
+opacity: 0.7;
+}*/
+
+.product-2 .front {
+ 
+opacity: 0.7;
+}
+
+/*.product-2 .back {
+  background: url("http://emper.cz/img/owl/02_2.jpg");
+opacity: 0.7;
+}*/
+
+.product-3 .front {
+  
+opacity: 0.7;
+}
+
+/*.product-3 .back {
+  background: url("http://emper.cz/img/owl/03_2.jpg");
+opacity: 0.7;
+}*/
+
+.product-4 .front {
+ 
+opacity: 0.7;
+}
+
+/*.product-4 .back {
+  background: url("http://emper.cz/img/owl/04_2.jpg");
+opacity: 0.7;
+}*/
+
+.product-5 .front {
+ 
+opacity: 0.7;
+}
+
+/*.product-5 .back {
+  background: url("http://emper.cz/img/owl/05_2.jpg");
+opacity: 0.7;
+}*/
+
+.product-6 .front {
+ 
+opacity: 0.7;
+
+}
+
+/*.product-6 .back {
+  background: url("http://emper.cz/img/owl/06_2.jpg");
+opacity: 0.7;
+}*/
+
+.owl {
+  clear: both;
+  padding: 7px;
+  line-height: 1.4em;
+  color: #aaa;
+  text-shadow: 1px 2px 2px #111;
+}
+.owl a {
+  text-decoration: none;
+  color: #fff;
+  -moz-transition: ease 0.1s;
+  -o-transition: ease 0.1s;
+  -webkit-transition: ease 0.1s;
+  transition: ease 0.1s;
+}
+.owl a:hover {
+  color: #b33;
+}
+.owl p {
+  margin-bottom: 6px;
+}

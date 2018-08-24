@@ -1,0 +1,40 @@
+body,html{width:100%;height:100%;padding:0;background:#000;margin:0;overflow:hidden;
+
+
+
+}
+.bubble{background:teal;opacity:.5;position:fixed;
+	border-radius: 100%;
+}
+.igt{
+
+    -webkit-animation: myfirst 3s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-direction: alternate; /* Safari 4.0 - 8.0 */
+    animation: myfirst 3s;
+    animation-direction: alternate;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes myfirst {
+    0%   {left: 0px; top: 0px;}
+    50%  {left: 40%; top: 0px;}
+    }
+
+@keyframes myfirst {
+    0%   {left: 0px; top: 0px;}
+    50%  {left: 40%; top: 0px;}
+    }
+
+
+p{
+	font-family:'Great Vibes',cursive;
+	color:#fff;
+	margin:auto;
+	position:absolute;
+	top:0;
+	bottom:0;
+	font-size:6vw;
+	text-align:center;width:100%;
+	height:100px;
+	opacity:0.8}
+.color{width:30px;height:30px;display:inline-block;border-radius:50%;margin:12px -6px 0 12px;border:2px solid #fff;cursor:pointer}
